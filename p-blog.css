@@ -1,0 +1,138 @@
+p {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    font-size: 12.0pt;
+    font-family: "MS Gothic";
+    color: #663366;
+}
+
+h1 {
+    margin-top: 12.0pt;
+    margin-right: 0cm;
+    margin-bottom: 3.0pt;
+    margin-left: 0cm;
+    page-break-after: avoid;
+    font-size: 24.0pt;
+    font-family: "MS Gothic";
+    color: #663366;
+    font-weight: normal;
+}
+
+h2 {
+    margin-top: 12.0pt;
+    margin-right: 0cm;
+    margin-bottom: 3.0pt;
+    margin-left: 0cm;
+    page-break-after: avoid;
+    font-size: 18.0pt;
+    font-family: "MS Gothic";
+    color: #996699;
+    font-weight: normal;
+}
+
+h3 {
+    margin-top: 12.0pt;
+    margin-right: 0cm;
+    margin-bottom: 3.0pt;
+    margin-left: 0cm;
+    page-break-after: avoid;
+    font-size: 14.0pt;
+    font-family: "MS Gothic";
+    color: #996666;
+    font-weight: bold;
+
+}
+
+h4 {
+    margin-top: 12.0pt;
+    margin-right: 0cm;
+    margin-bottom: 3.0pt;
+    margin-left: 0cm;
+    page-break-after: avoid;
+    font-size: 12.0pt;
+    font-family: "MS Gothic";
+    color: #663366;
+    font-weight: normal;
+
+}
+
+h5 {
+    margin-top: 12.0pt;
+    margin-right: 0cm;
+    margin-bottom: 3.0pt;
+    margin-left: 0cm;
+    font-size: 10.0pt;
+    font-family: "MS Gothic";
+    color: #996699;
+    font-weight: normal;
+}
+
+h6 {
+    margin-top: 12.0pt;
+    margin-right: 0cm;
+    margin-bottom: 3.0pt;
+    margin-left: 0cm;
+    font-size: 8pt;
+    font-family: "MS Gothic";
+    color: #996666;
+    font-weight: normal;
+}
+
+a:link {
+    color: #996699;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #006666;
+    text-decoration: underline;
+}
+
+.container {
+    width: 975px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+aside {
+    float: left;
+    width: 200px;
+    position: fixed;
+    background-color: rgba(255, 247, 231, 0.6);
+    border: 3px double white;
+    padding: 10px;
+}
+
+body {
+    background-image: url("img/image001.gif");
+    background-color: #d3ffad;
+}
+
+.main {
+    width: 700px;
+    float: right;
+    height: auto;
+    background-color: rgba(255, 247, 231, 0.6);
+    border: 3px double white;
+    padding: 10px;
+    text-align: justify;
+}
+
+.book {
+    width: 20px;
+    height: auto;
+}
+
+td,
+tr {
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: "MS Gothic";
+}
+
+#digital-clock {
+    font-weight: bold;
+    font-family: "MS Gothic";
+    color: #006666;
+}

@@ -1,0 +1,86 @@
+a:link {
+    color: rgb(255, 133, 154);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 133, 154);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(251, 190, 222);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(250, 243, 192);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("img/bgg.gif");
+    background-color: white;
+    background-repeat: repeat-repeat;
+    background-size: 100px 100px;
+    background-attachment: fixed;
+    font-family: "MS UI Gothic", Tahoma;
+    background-position: center;
+}
+
+img {
+    float: right;
+    margin-left: 20px;
+}
+
+#div {
+    border: 5px double #9C8373;
+    background-color: #FDEEC4;
+    color: #9C8373;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: auto;
+    text-align: justify;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    animation: move 2s;
+    animation-timing-function: ease;
+}
+
+h2 {
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+.waviy {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 8px;
+    color: rgb(156, 131, 115);
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}

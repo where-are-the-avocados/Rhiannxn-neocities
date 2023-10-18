@@ -1,0 +1,117 @@
+a:link {
+  color: rgb(255, 133, 154);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(255, 133, 154);
+  background-color: transparent;
+  text-decoration: line-through;
+}
+
+a:hover {
+  color: rgb(251, 190, 222);
+  background-color: transparent;
+  text-decoration: underline;
+  transform: rotate(180deg);
+}
+
+a:active {
+  color: rgb(250, 243, 192);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+body {
+  background-image: url("img/bgg.gif");
+  background-color: #FDEEC4;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+  font-family: "MS UI Gothic", Tahoma;
+}
+
+#div {
+  border: 5px double #9C8373;
+  background-color: rgb(253, 238, 196);
+  color: #9C8373;
+  width: 600px;
+  height: auto;
+  text-align: justify;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#test {
+  border: 5px double white;
+  background-color: #9C8373;
+  color: white;
+  float: right;
+  position: relative;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+
+#thanks {
+  border: 5px double #9C8373;
+  background-color: #FDEEC4;
+  color: #9C8373;
+  font-size: 90%;
+  height: auto;
+  width: 150px;
+  padding: 10px 10px 10px 10px;
+}
+
+#rightpic {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  overflow: visible;
+}
+
+#leftpic {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  overflow: visible;
+}
+
+#frame {
+  overflow: scroll;
+  border-style: outset;
+  position: relative;
+  width: auto;
+  border: 2px;
+  resize: none;
+}
+
+#update {
+  border: 2px dashed;
+  height: auto;
+  width: auto;
+  padding: 5px;
+}
+
+#container {
+  width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#map {
+  border: 2px dashed;
+  height: auto;
+  width: auto;
+  padding: 2px;
+}
+
+h2 {
+  letter-spacing: 8px;
+}

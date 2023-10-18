@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <link rel="icon" href="img/1.ico">
+  <script src="javascript/carousel.js" defer></script>
+  <title>Microsoft Flight Simulator 98</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .carousel {
+      width: auto;
+      height: auto;
+      position: relative;
+    }
+
+    .carousel>ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    .slide>img {
+      display: block;
+      width: 800px;
+      height: 600px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .slide[data-active] {
+      opacity: 1;
+      z-index: 1;
+      transition-delay: 0ms;
+    }
+
+    .carousel-button {
+      position: absolute;
+      z-index: 2;
+      border: none;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .carousel-button.prev {
+      top: 620px;
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      top: 620px;
+      right: 10px;
+    }
+
+    body {
+      background-color: rgb(0, 128, 128);
+      text-align: justify;
+    }
+
+    .desktop {
+      font-family: "MS GOTHIC";
+      font-size: 14px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+
+    .line {
+      display: inline-block;
+    }
+
+    .window {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+      margin-bottom: 20px;
+    }
+
+    #fs98 {
+      margin-top: 50px;
+      width: 400px;
+    }
+
+    #index {
+      float: right;
+      position: fixed;
+      right: 30px;
+    }
+
+    .w98 {
+      position: absolute;
+      float: left;
+      margin-top: 0px;
+      left: 5px;
+      top: 5px;
+    }
+
+    #container {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 0px;
+    }
+
+    #air_crafts {
+      width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    #index1 {
+      width: 200px;
+    }
+
+    .warning {
+      color: red;
+      font-weight: bold;
+    }
+
+    .aircraft-text {
+      width: 600px;
+      text-align: justify;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      font-size: 10px;
+      text-align: center;
+    }
+
+    #divspecs {
+      float: left;
+      left: -30%;
+      top: 250px;
+      margin: 20px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="javascript/drag.js">
+  </script>
+  <div id="container">
+    <div id="index">
+      <div id="index1" class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">Index</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>
+          <aside>
+            <b>Table of Contents</b>
+            <ul class="tree-view">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutme.html">About</a></li>
+              <li><a href="p-blog.html">Blog</a></li>
+              <li>
+                <details open>
+                  <summary>About this website</summary>
+                  <ul>
+                    <li><a href="#fs98">What is Microsoft Flight Simulator 98?</a></li>
+                    <li>How did you run this game?</li>
+                    <li>Windows 98</li>
+                    <li>Flight Simulator 98</li>
+                    <li>Simviation</li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
+                <details open>
+                  <summary>Museum!</summary>
+                  <ul>
+                    <li>Martin 2-0-2</li>
+                    <li>D.H. 60 Gipsy Moth</li>
+                    <li>Convair CV-440</li>
+                    <li>Ford Trimotor 5-AT-C</li>
+                    <li>Hawker Siddeley HS 748</li>
+                    <li>Curtiss T-32 Condor II</li>
+                    <li>DeHavilland Dove</li>
+                    <li>Lockeed Lodestar</li>
+                    <li>Lockeed Electra 10A</li>
+                    <li>Aérospatiale Alouette III</li>
+                    <li>Vultee BT-13 Valiant FACH</li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <img alt="desktop1" class="w98" src="img/desktop1.png">
+
+
+    <div id="fs98" class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Microsoft Flight Simulator 98 Chilean Aircraft Museum!</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p>This website is dedicated to preserve registers of Microsoft Flight Simulator 98! Most of them are
+          add-ons
+          and mods downloaded from several websites through the internet.
+          These mods were downloaded from Simviation in the section "FS98". Special credits to Mr. Abad who
+          made most of
+          these wonderful models.
+        <section>
+          <b>What is Microsoft Flight Simulator 98?</b><br>
+          It is a vintage flight simulator made for Windows 98, its one of my favorite games because it is
+          easy to
+          mod,
+          also it has some wonderful aesthetics. People back in
+          the 90's and early 2000's made a lot of custom content and addons to improve the gaming
+          experience.
+        </section>
+        <br>
+        <section>
+          <b>How did you run this game?</b><br>
+          I used VM's to run Windows 98 OS 2.5. with patches installed to run with 32-bit deep colour!, then I
+          installed
+          MS Flight Simulator 98 .iso and then the patches v1.1 and Flight Shop so you can play with custom aircrafts
+          and maps.
+          There
+          are more mods there that improve weather and random interactions with airports, but I dont know exactly how to
+          use them.
+        </section>
+        <center>
+          <p class="warning"> <b>Note:</b> This page is optimized to be viewed on 1366x768 or
+            superior.</p>
+        </center>
+
+        <center>
+          <button
+            onclick='window.location.assign("https://winworldpc.com/product/windows-98/98-second-edition")'>Windows
+            98</button>
+          <button onclick='window.location.assign("https://archive.org/details/microsoft-flight-simulator-98")'>FS
+            98</button>
+          <button onclick='window.location.assign("https://simviation.com/1/front-page")'>Simviation</button>
+        </center>
+      </div>
+    </div>
+
+    <section aria-label="Newest Photos">
+      <div class="window" style="width: 820px; height: 680px">
+        <div class="title-bar">
+          <div class="title-bar-text">Aircrafts</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+
+          <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">Back</button>
+            <button class="carousel-button next" data-carousel-button="next">Next</button>
+            <ul data-slides>
+              <li class="slide" data-active>
+                <img src="img/martinliner.gif" alt="MartinLiner">
+                <p class="aircraft-text"> <strong>Martin Liner 2-0-2:</strong> This particular aircraft was introduced
+                  in 1947 and was used
+                  until 1975. It has a
+                  variant which is called
+                  202A also was replaced with the Martin 4-0-4 after a problem was discovered
+                  with the right wing. Here you can see how <a
+                    href="http://www.pilotosretiradoslan.cl/wp-content/uploads/2016/08/image001-11.png">it
+                    looked in real
+                    life</a></p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">2-0-2 Specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>74 ft 7 in (22.74 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>93 ft 3 in (28.43 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Empty weight</td>
+                            <td>22,500 lb (10.227 kg)</td>
+                          </tr>
+                          <tr>
+                            <td>Loaded weight</td>
+                            <td>36,500 lb (16.590 kg)</td>
+                          </tr>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>2x Pratt & Whitney R-2800 Double</td>
+                          </tr>
+                          <tr>
+                            <td>Maximum speed</td>
+                            <td>280 mph (242 kn, 450 km/h)</td>
+                          </tr>
+                          <tr>
+                            <td>Cruise speed</td>
+                            <td>254 mph (220 kn, 409 km/h)</td>
+                          </tr>
+                          <tr>
+                            <td>Range</td>
+                            <td>1,800 mi (1,564 nmi, 2.900 km)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+              <li class="slide">
+                <img src="img/gipsymoth.gif" alt="gipsymoth">
+                <p class="aircraft-text"><strong>De Havilland DH.60 Moth:</strong> It was created in
+                  early 1920's it has
+                  different version, the
+                  militar one, the one destined for commercial use and the last one which was used
+                  for acrobacies and stuff like that. <a
+                    href="http://www.pilotosretiradoslan.cl/wp-content/uploads/2016/08/image001-5-768x524.png">here's
+                    how it
+                    looked like back then.</a></p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Gipsy Specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>23 ft 11 in</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>30 ft 0 in</td>
+                          </tr>
+                          <tr>
+                            <td>Weight</td>
+                            <td>1650 lb (max T/O weight)</td>
+                          </tr>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>85 hp Gipsy I engine</td>
+                          </tr>
+                          <tr>
+                            <td>Max. speed</td>
+                            <td>102 mph</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+              <li class="slide">
+                <img src="img/convair.gif" alt="convair">
+                <p class="aircraft-text"> <strong>Convair CV-440:</strong> It was created in 1947 and was produced until
+                  1956, it replaced the
+                  Douglas DC-3. It also
+                  had a militar version but I couldn't get any photos or information about it.
+                  Here's how it <a
+                    href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Convair_440_Metroplitan_LAN_Chile_copy_032-61.jpg/800px-Convair_440_Metroplitan_LAN_Chile_copy_032-61.jpg">looked
+                    like in the 60's</a></p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Convair Specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>79'</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>105'</td>
+                          </tr>
+                          <tr>
+                            <td>Weight</td>
+                            <td>47,000 lbs max.</td>
+                          </tr>
+                          <tr>
+                            <td>Power</td>
+                            <td>2,400 hp. R-2800-CB16 radials</td>
+                          </tr>
+                          <tr>
+                            <td>Details</td>
+                            <td>LAN Chile Convair 340/440</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+              </li>
+
+              <li class="slide">
+                <img src="img/triline.gif" alt="triline">
+                <p class="aircraft-text"><strong>Ford Trimotor:</strong> They were produced between 1925 and 1933. This
+                  particular one
+                  was used by LAN Chile
+                  in the 30's until early
+                  50's. They were commonly called "Tin Goose". <a
+                    href="https://2.bp.blogspot.com/-Mn-aA1x9vt4/U9w8TWdeoPI/AAAAAAAABgY/tC1OiBfz_NY/s1600/Ford+5-AT-C,+LAN+2+d.jpg">Real
+                    picture</a></p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Ford Specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>49 ft. 10 in</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>74 ft 0 in</td>
+                          </tr>
+                          <tr>
+                            <td>Empty</td>
+                            <td>6500 lbs. / </td>
+                          </tr>
+                          <tr>
+                            <td>Max. Weight</td>
+                            <td>10,130 lbs.</td>
+                          </tr>
+                          <tr>
+                            <td>Power</td>
+                            <td>3 write J-6 Engines (300 hp each)</td>
+                          </tr>
+                          <tr>
+                            <td>Cruise speed</td>
+                            <td>110 mph</td>
+                          </tr>
+                          <tr>
+                            <td>Approach speed</td>
+                            <td>70 - 80 mph</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+              <li class="slide">
+                <img src="img/HS748.gif" alt="HS748">
+                <p class="aircraft-text"> <strong>HS-748 Avro:</strong> LAN operated this aircraft between 1966 to 1976.
+                  The new turboprop-engined plane with capacity
+                  for 55 passengers was destined to flight the
+                  regional routes Santiago-Arica and
+                  Santiago - Pto. Montt - Pta. Arenas. <a
+                    href="https://aviationrainbowscom.files.wordpress.com/2017/09/025-hawker-siddeley-avro-hs-748-sr-2-cc-cek-749-lan-chile-c2a9-michel-anciaux.jpg?w=610">In
+                    real life picture</a></p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">HS-748 Specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>67 ft</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>102 ft 6 in</td>
+                          </tr>
+                          <tr>
+                            <td>Weight</td>
+                            <td>46,500 lbs</td>
+                          </tr>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>RR dat Mk536-2 2280 hp</td>
+                          </tr>
+                          <tr>
+                            <td>Cruise speed</td>
+                            <td>281 mph (244 kn, 452 mph)</td>
+                          </tr>
+                          <tr>
+                            <td>Range</td>
+                            <td>1,066 mi (926 nmi, 1715 km) (with max payload)</td>
+                          </tr>
+                          <tr>
+                            <td>Service ceiling</td>
+                            <td>25,000 ft (7,260 m)</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+              <li class="slide">
+                <img src="img/condor.gif" alt="condor">
+                <p class="aircraft-text"><strong>Curtiss T-32 Condor:</strong> They were produced between 1933 and 1945.
+                  In Chile we had three of them which originally belonged to American Airlines. I couldn't find any
+                  pictures of the version used here but here's a <a
+                    href="https://en.wikipedia.org/wiki/File:Curtiss_YC-30_Condor_front.jpg">reference</a>
+                </p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">T-32 Condor Specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>2 x Wright SCR-1820-F3 Cyclone radial piston engine, 715 hp each</td>
+                          </tr>
+                          <tr>
+                            <td>Maximum speed</td>
+                            <td>176 mph (283 km/h)</td>
+                          </tr>
+                          <tr>
+                            <td>Range</td>
+                            <td>840 miles (1,353 km)</td>
+                          </tr>
+                          <tr>
+                            <td>Service ceiling</td>
+                            <td>22,000 ft (6,705 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>82 ft 0 in (24.99 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Length</td>
+                            <td>49 ft 6 in (15.09 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Gross weight</td>
+                            <td>17,500 lb (7.938 kg)</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="slide">
+                <img src="img/dove.gif" alt="dove">
+                <p class="aircraft-text"><strong>De Havilland Dove:</strong>
+                  It had capacity for seven passengers, LAN Chile had four daily frequencies to Valparaiso, every one of
+                  them landed on El Belloto airport, and then they were
+                  personnel in the routes to La Serena and Concepción.
+                </p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Dove specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>39 ft 3 in</td>
+                          </tr>
+                          <tr>
+                            <td>Wing span</td>
+                            <td>57 ft</td>
+                          </tr>
+                          <tr>
+                            <td>Weight</td>
+                            <td>MTOW 8,800 lbs</td>
+                          </tr>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>2x De Havilland Gipsy Queen 70 Mk.2 geared, supercharged 6-cylinder in-line inverted
+                              air-cooled engine, 380 bhp (283 KW) each.</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+
+              <!--2nuevo-->
+              <li class="slide">
+                <img src="img/lodestar.gif" alt="lodestar">
+                <p class="aircraft-text"><strong>Lockeed Lodestar:</strong>
+                  LAN 1943-1953. During WWII, this aircraft carried a big chilean flag in the nose, as neutrality badge.
+                  (Requirement of the "Pan American Exclusion Zone", imposed by USA to all air traffic flying in Latin
+                  American air-space).
+                </p>
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Lodestar specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>49 ft 10 in</td>
+                          </tr>
+                          <tr>
+                            <td>Wing span</td>
+                            <td>65 ft 6 in</td>
+                          </tr>
+                          <tr>
+                            <td>Weight</td>
+                            <td>17500 lbs MTOW</td>
+                          </tr>
+                          <tr>
+                            <td>Power</td>
+                            <td>2x 1050 hp P&amp;W Hornet S1C3-G</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+
+              </li>
+
+              <!--3nuevo-->
+
+              <li class="slide">
+                <img src="img/electra.gif" alt="electra">
+                <p class="aircraft-text"><strong>Lockeed Electra:</strong>
+                  Lockeed Electra 10A was used by LAN Chile between the years 1941 to 1952. Its name came from a star in
+                  the Pleiades; its first prototype was undertaken at the University of Michigan.
+                </p>
+
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Electra specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length</td>
+                            <td>39 ft 0 in</td>
+                          </tr>
+                          <tr>
+                            <td>Height</td>
+                            <td>10 ft 8 in</td>
+                          </tr>
+                          <tr>
+                            <td>Wing span</td>
+                            <td>55 ft 0 in</td>
+                          </tr>
+                          <tr>
+                            <td>Empty weight</td>
+                            <td>6,454 lb (2.930 kg)</td>
+                          </tr>
+                          <tr>
+                            <td>Engines</td>
+                            <td>2x P&amp;W-Wasp Junior B-450hp</td>
+                          </tr>
+                          <tr>
+                            <td>Maximum speed</td>
+                            <td>202 mph (325 km/h)</td>
+                          </tr>
+                          <tr>
+                            <td>Range</td>
+                            <td>713 mi (1.150 km)</td>
+                          </tr>
+                          <tr>
+                            <td>Service ceiling</td>
+                            <td>19,400 ft (5.910 m)</td>
+                          </tr>
+                        </tbody>
+
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+              </li>
+
+              <!--helicopter-->
+              <li class="slide">
+                <img src="img/alouetteIII.gif" alt="louette">
+                <p class="aircraft-text"><strong>Aérospatiale Alouette III:</strong>
+                  It belonged to the Chilean Navy, Ten Alouette III, version SA319B was used for
+                  maritime surveillance task, liaison, passenger, cargo and SAR operations. These ones started in
+                  1958 and ended their life in 1991.
+                </p>
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Alouette III specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Designer</td>
+                            <td>Woldgang Kulhanek</td>
+                          </tr>
+                          <tr>
+                            <td>Crew</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td>Capacity</td>
+                            <td>5 passengers</td>
+                          </tr>
+                          <tr>
+                            <td>Length</td>
+                            <td>10.03 m (32 ft 11 in)</td>
+                          </tr>
+                          <tr>
+                            <td>Height</td>
+                            <td>3 m (9 ft 10 in)</td>
+                          </tr>
+                          <tr>
+                            <td>Empty weight</td>
+                            <td>1143 kg (2520 lb)</td>
+                          </tr>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>1 x Turbomeca Artouste IIIB turboshaft<br>649 kW (870 hp) derated to 425 kW (570 hp)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Main rotor diameter</td>
+                            <td>11,02 m (36 ft 2 in) </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+              </li>
+              <!--end helicopter-->
+
+              <!--fach-->
+              <li class="slide">
+                <img src="img/vultee.gif" alt="louette">
+                <p class="aircraft-text"><strong>Vultee BT-13 Valiant FACH:</strong>
+                  BT stands for "Basic Trainer". It was flown by chilean cadets during the 1940's and 1950's decade, at
+                  Escuela de Aviación Capitán Ávalos. It was the second phase of the three phase training program for
+                  the pilots.
+                </p>
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Vultee specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>1 x Pratt & Whitney R-985-AN-1, 450</td>
+                          </tr>
+                          <tr>
+                            <td>Maximum speed</td>
+                            <td>180 mph (290 km/h)</td>
+                          </tr>
+                          <tr>
+                            <td>Range</td>
+                            <td>725 miles (1.167 km)</td>
+                          </tr>
+                          <tr>
+                            <td>Service ceiling</td>
+                            <td>21,650 ft (6.600 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan</td>
+                            <td>42 ft 0 in (12.80 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Length</td>
+                            <td>28 ft 10 in (8.79 m)</td>
+                          </tr>
+                          <tr>
+                            <td>Maximum takeoff</td>
+                            <td>4,496 lb (2.039 kg)</td>
+                          </tr>
+                          <tr>
+                            <td>Original</td>
+                            <td>Captain slug</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+              </li>
+              <!--end fach-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
