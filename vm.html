@@ -1099,6 +1099,74 @@
                 </div>
               </li>
               <!--end fach-->
+
+              <!--inicio vampire-->
+              <li class="slide">
+                <img src="img/vampire.gif" alt="vampire">
+                <p class="aircraft-text"><strong>DeHavilland DH115 Vampire FACH</strong>
+                  The Chilean Air Force operated the DH115 between 1959 to 1979. Its main purposes were being a
+                  fighter-bomber and
+                  it was also utilized as a close support and training aircraft.
+                </p>
+                <div id="divspecs" class="window" style="width: 200px">
+                  <div class="title-bar">
+                    <div class="title-bar-text">Vampire specs</div>
+                    <div class="title-bar-controls">
+                      <button aria-label="Minimize"></button>
+                      <button aria-label="Maximize"></button>
+                      <button aria-label="Close"></button>
+                    </div>
+                  </div>
+                  <div class="window-body">
+                    <p>
+                    <div class="sunken-panel" style="height: 170px; width: 180px;">
+                      <table class="interactive">
+                        <thead>
+                          <tr>
+                            <th>Category</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Length:</td>
+                            <td>30 ft 9 in (9.37 cm)</td>
+                          </tr>
+                          <tr>
+                            <td>Wingspan:</td>
+                            <td>38 ft (11.58 cm)</td>
+                          </tr>
+                          <tr>
+                            <td>Empty weight</td>
+                            <td>7,283 lbs (3,304)</td>
+                          </tr>
+                          <tr>
+                            <td>Max takeoff weight</td>
+                            <td>12,390 lb (5,620 kg)</td>
+                          </tr>
+                          <tr>
+                            <td>Powerplant</td>
+                            <td>1x DeHavilland Goblin 3 centrifugal turbojet 3,350 lbf (14,90 kN)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <script>
+                      document.querySelectorAll('table.interactive').forEach(element => {
+                        element.addEventListener('click', (event) => {
+                          const row = event.path.find(element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY');
+                          if (row) {
+                            row.classList.toggle('highlighted');
+                          }
+                        })
+                      });
+                    </script>
+                  </div>
+                </div>
+              </li>
+              <!--end vampire-->
+
+
             </ul>
           </div>
         </div>
