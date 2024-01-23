@@ -33,20 +33,19 @@ body {
     background-position: center;
 }
 
-
 h2 {
     text-align: center;
     letter-spacing: 8px;
 }
 
 #container {
-  width: auto;
+    width: auto;
 }
 
 .main {
     margin-left: auto;
     margin-right: auto;
-    width: 900px;
+    width: 1000px;
     padding: 10px;
     text-align: justify;
 }
@@ -81,7 +80,7 @@ td {
 }
 
 .pic:hover {
-    transform: scale(2);
+    transform: scale(1.5);
 }
 
 .pic {
@@ -109,7 +108,7 @@ body.lightmode {
     background-color: transparent;
     color: white;
     text-align: justify;
-    width: 900px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -144,10 +143,10 @@ button:active {
 }
 
 .magiceye {
- width: 50px;
- height: auto;
+    width: 50px;
+    height: auto;
 }
 
 .year {
-  text-align: center; 
+    text-align: center;
 }
