@@ -33,6 +33,11 @@ body {
     background-position: center;
 }
 
+figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
 h2 {
     text-align: center;
     letter-spacing: 8px;
@@ -45,7 +50,7 @@ h2 {
 .main {
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    width: auto;
     padding: 10px;
     text-align: justify;
 }
@@ -102,6 +107,7 @@ body.lightmode {
     background-attachment: fixed;
     font-family: "MS UI Gothic", Tahoma;
     background-position: center;
+    width: auto;
 }
 
 .lightmode .main {
@@ -129,6 +135,16 @@ button {
 
 button:active {
     border-style: inset;
+}
+
+.magic_eye img {
+    margin: auto;
+    display: block;
+}
+
+.magic_eye {
+    text-align: center;
+    font-style: italic;
 }
 
 .vinyl {
