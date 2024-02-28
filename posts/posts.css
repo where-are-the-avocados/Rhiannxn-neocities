@@ -30,10 +30,11 @@ body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
     text-align: left;
-    background-image: url("img/image001.gif");
+    background-image: url("/img/image001.gif");
 }
 
-h1 {
+h1,
+h2 {
     color: rgb(210, 115, 138);
 }
 
@@ -42,21 +43,13 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    padding: 10px;
     text-align: justify;
 }
 
-.prep {
-    border: 1px solid white;
+.blog {
+    border: 2px solid pink;
     padding: 20px;
     margin-bottom: 30px;
-    background-color: rgba(255, 247, 231, 0.6);
-}
-
-.list {
-    padding: 10px;
-    border: 1px solid white;
-    line-height: 1.6;
     background-color: rgba(255, 247, 231, 0.6);
 }
 
