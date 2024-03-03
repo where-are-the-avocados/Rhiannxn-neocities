@@ -6,7 +6,7 @@ This repository's purpose is to maintain and keep a backup of my neocities websi
 
 ## Website's Objetive
 
-Its purpose is to improve my coding skills in HTML/CSS JS and web design.
+Its purpose is to improve my coding skills in HTML/CSS, JS and web design.
 
 ## Information
 
