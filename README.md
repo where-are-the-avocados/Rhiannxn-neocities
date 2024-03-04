@@ -15,4 +15,5 @@ or messages! I accept tips, critics and recommendations; especially on the aircr
 
 ## Screenshots
 
-![image](https://github.com/where-are-the-avocados/Rhiannxn-neocities/assets/134813267/4ab225e2-d7e4-4c7e-a4bf-70e615b1ffbf)
+![image](https://github.com/where-are-the-avocados/Rhiannxn-neocities/assets/134813267/4ab225e2-d7e4-4c7e-a4bf-70e615b1ffbf
+![image](/img/vm.gif)
