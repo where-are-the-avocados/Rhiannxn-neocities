@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="icon" href="img/gold.gif">
   <title>R h i a . . . !</title>
+  <script src="javascript/carousel.js" defer>
+  </script>
 </head>
 
 <body>
@@ -87,18 +89,7 @@
         <b>
           <p id="salute"></p>
         </b>
-        <script>
-          var today = new Date()
-          var curHr = today.getHours()
-          if (curHr >= 0 && curHr < 6) {
-            document.getElementById("salute").innerHTML = "What are you doing here? Go to sleep, sweetie...";
-          } else if (curHr >= 6 && curHr < 12) {
-            document.getElementById("salute").innerHTML = "Good Morning!";
-          } else if (curHr >= 12 && curHr < 17) {
-            document.getElementById("salute").innerHTML = "Good Afternoon!";
-          } else {
-            document.getElementById("salute").innerHTML = "Good Evening!";
-          }
+        <script src="javascript/index-salute.js">
         </script>
       </center>
       Welcome to my little corner! Thank you for visiting this humble place! This is a personal website created with the
@@ -119,6 +110,60 @@
           <li><strong>Blog: </strong>Sometimes I write stuff that comes to my mind</li>
         </ul>
       </div>
+      <br>
+      <hr>
+
+      <!--FINAL FANTASY-->
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">Back</button>
+        <button class="carousel-button next" data-carousel-button="next">Next</button>
+        <h2>Final Fantasy XI</h2>
+        <p>I started playing Final Fantasy XI two years ago when I was looking for old MMO's to play. I was captivated
+          by
+          this game aesthetics, the gameplay? not that much. My goal is to complete every expansion this year.</p>
+
+        <ul data-slides>
+          <li class="slide" data-active>
+            <img class="ffimg" src="img/ff11-1.png" alt="ff1">
+          </li>
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-2.png" alt="ff2">
+          </li>
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-3.png" alt="ff3">
+          </li>
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-4.png" alt="ff4">
+          </li>
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-5.png" alt="ff5">
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-6.png" alt="ff6">
+
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-7.png" alt="ff7">
+          </li>
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-8.png" alt="ff8">
+          </li>
+
+          <li class="slide">
+            <img class="ffimg" src="img/ff11-9.png" alt="ff9">
+          </li>
+          </li>
+          </li>
+        </ul>
+
+      </div>
+      <!--FINAL FANTASY-->
+      <br><br>
       <hr>
       <h2>What's new?</h2>
       <div id="update">
