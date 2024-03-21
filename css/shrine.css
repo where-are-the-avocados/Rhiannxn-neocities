@@ -23,7 +23,7 @@ a:active {
 }
 
 body {
-    background-image: url("img/bgg.gif");
+    background-image: url("../img/bgg.gif");
     background-color: white;
     background-repeat: repeat-repeat;
     background-size: 100px 100px;
