@@ -114,6 +114,7 @@ body {
 
 h2 {
   letter-spacing: 8px;
+  text-align: center;
 }
 
 #ff11 {
@@ -196,4 +197,12 @@ button {
 
 .slide>img:hover {
   transform: scale(1.2);
+}
+
+.list {
+  text-align: center;
+}
+
+.friends {
+  text-align: center;
 }

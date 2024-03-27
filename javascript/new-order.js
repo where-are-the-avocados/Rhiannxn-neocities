@@ -99,3 +99,98 @@ console.log(c >= 5);
 // OPERADORES LÓGICOS
 
 console.log(true && true);
+
+// short circuit
+// falsy
+let nombre2 = " ";
+let username = nombre2 || "anonimo";
+console.log(username);
+
+// bitwise
+
+// OPERADOR TERNARIO
+
+let edad2 = 1;
+let acceso = edad2 > 17 ? "PUEDE INGRESAR" : "NO PUEDE INGRESAR";
+console.log(acceso);
+
+// CONDICIONALES
+
+let edad3 = 5;
+if (edad3 > 17) {
+  console.log("Usuario mayor de edad");
+} else if (edad3 > 13) {
+  console.log("Tiene que ir con sus padres");
+} else {
+  console.log("No puede ingresar");
+}
+
+// WHILE LOOPS
+let i = 0;
+while (i < 10) {
+  if (i % 2 == 0) {
+    console.log("Numero par", i);
+  }
+  i++;
+}
+
+// DO WHILE EN LUGAR DE EVALUAR LA CONDICION AL INICIO, LO HACE AL FINAL
+do {
+  if (i % 2 == 0) {
+    console.log("Numero par", i);
+  }
+  i++;
+} while (i < 10);
+
+// FOR (ESUN LOOP COMPUESTO DE 3 EXPRESIONES; INICIO; COMPARACIÓN; ACCIÓN)
+for (let is = 2; is < 10; is++) {
+  if (is % 2 == 0) {
+    console.log("Numero par", is);
+  }
+}
+
+// for of
+let animales1 = ["chancho", "dragon", "perrito"];
+//fdsfsd
+for (let animal1 of animales1) {
+  console.log(animal1);
+}
+
+// FOR IN (SIRVE PARA QUE PODAMOS ITERAR LAS PROPIEDADES DE UN OBJETO)
+let usernew = {
+  id: 1,
+  name: "chanchito feliz",
+  age: 25,
+};
+
+for (let prop in usernew) {
+  console.log(prop);
+}
+
+let im = 0;
+while (im < 6) {
+  im++;
+  if (im === 2) {
+    continue;
+  }
+  if (im === 4) {
+    break;
+  }
+  console.log(im);
+}
+
+// SWITCH
+
+switch (accion) {
+  case "listar":
+    console.log("Accion de listar");
+    break;
+  case "guardar":
+    console.log("Accion de guardar");
+    break;
+  default:
+    console.log("Accion no reconocida");
+}
+
+// EJERCICIOS
+function cualEsMayor(a, b) {}
