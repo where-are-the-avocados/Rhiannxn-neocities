@@ -194,3 +194,8 @@ switch (accion) {
 
 // EJERCICIOS
 function cualEsMayor(a, b) {}
+
+// CORRIGIENDO COSAS
+
+
+  

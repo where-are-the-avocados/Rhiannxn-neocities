@@ -34,30 +34,43 @@ body {
   font-family: "MS UI Gothic", Tahoma;
 }
 
+/*------------------IMPORTANTE---------------*/
+
 #div {
-  border: 5px double #9C8373;
-  background-color: rgb(253, 238, 196);
-  color: #9C8373;
-  width: 600px;
+  border: 4px double #9C8373;
+  background-color: #fdf6e3;
+  color: #4a3f35;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: justify;
-  padding: 10px;
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 10px;
   position: relative;
 }
 
 
 #test {
-  border: 5px double white;
+  border: 3px solid #fff;
   background-color: #9C8373;
-  color: white;
-  float: right;
-  position: relative;
-  width: 230px;
-  height: auto;
-  padding: 10px;
+  color: #fff;
+  width: 250px;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
+
+/*------------------IMPORTANTE---------------*/
 
 #thanks {
   border: 5px double #9C8373;
@@ -92,7 +105,11 @@ body {
   }
 }
 
-
+#end-text {
+  top: 0;
+  text-align: center;
+  position: relative;
+}
 
 
 #rightpic {
@@ -152,8 +169,6 @@ h2 {
   width: auto;
   padding: 2px;
 }
-
-/* CAROUSEL SECTION RIGHT BELOW HERE*/
 
 *,
 *::before,
